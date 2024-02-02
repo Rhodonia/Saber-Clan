@@ -31,7 +31,7 @@ public class CmdClaimLine extends FCommand {
         // Args
         this.optionalArgs.put("amount", "1");
         this.optionalArgs.put("direction", "facing");
-        this.optionalArgs.put("faction", "you");
+        this.optionalArgs.put("clans", "you"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.CLAIM_LINE)
                 .playerOnly()

@@ -27,7 +27,7 @@ public class CmdChest extends FCommand {
     @Override
     public void perform(CommandContext context) {
         if (!FactionsPlugin.getInstance().getConfig().getBoolean("fchest.Enabled")) {
-            context.msg(TL.GENERIC_DISABLED, "Faction Chests");
+            context.msg(TL.GENERIC_DISABLED, "Clan Chests");
             return;
         }
         // This permission check is way too explicit, but it's clean

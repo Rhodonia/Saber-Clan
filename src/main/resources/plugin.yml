@@ -1,5 +1,5 @@
-name: Factions
-prefix: SaberFactions
+name: Clans
+prefix: SaberClans
 version: ${project.version}
 api-version: 1.13
 main: com.massivecraft.factions.FactionsPlugin
@@ -7,385 +7,385 @@ authors: [Olof Larsson, Brett Flannigan, drtshock, ProSavage, DroppingAnvil, Dri
 depend: [Vault]
 softdepend: [CoreProtect, PlayerVaults, PlaceholderAPI, MVdWPlaceholderAPI, PermissionsEx, Permissions, Essentials, EssentialsChat, HeroChat, iChat, LocalAreaChat, LWC, nChat, ChatManager, CAPI, AuthMe, Vault, Spout, WorldEdit, WorldGuard, AuthDB, CaptureThePoints, CombatTag, dynmap, FactionsTop, WildStacker, Multiverse-Core, MultiWorld]
 commands:
-  factions:
-    description: Reference command for Factions.
-    aliases: [f]
+  clans:
+    description: Reference command for clans.
+    aliases: [c]
 permissions:
-  factions.kit.admin:
+  clans.kit.admin:
     description: All faction permissions.
     children:
-      factions.reserve: true
-      factions.kit.mod: true
-      factions.config: true
-      factions.convert: true
-      factions.lock: true
-      factions.reload: true
-      factions.save: true
-      factions.modifypower: true
-      factions.ahome: true
-      factions.setmaxvaults: true
-      factions.convertconfig: true
-  factions.*:
-    description: This is just an alias for factions.kit.admin
+      clans.reserve: true
+      clans.kit.mod: true
+      clans.config: true
+      clans.convert: true
+      clans.lock: true
+      clans.reload: true
+      clans.save: true
+      clans.modifypower: true
+      clans.ahome: true
+      clans.setmaxvaults: true
+      clans.convertconfig: true
+  clans.*:
+    description: This is just an alias for clans.kit.admin
     children:
-      factions.convertconfig: true
-      factions.kit.admin: true
-  factions.kit.mod:
+      clans.convertconfig: true
+      clans.kit.admin: true
+  clans.kit.mod:
     description: All faction permissions but configuration and persistance.
     children:
-      factions.kit.halfmod: true
-      factions.disband.any: true
-      factions.setpeaceful: true
-      factions.setpermanent: true
-      factions.setpermanentpower: true
-      factions.powerboost: true
-      factions.sethome.any: true
-      factions.money.*: true
-      factions.join.any: true
-      factions.join.others: true
-      factions.admin.any: true
-      factions.mod.any: true
+      clans.kit.halfmod: true
+      clans.disband.any: true
+      clans.setpeaceful: true
+      clans.setpermanent: true
+      clans.setpermanentpower: true
+      clans.powerboost: true
+      clans.sethome.any: true
+      clans.money.*: true
+      clans.join.any: true
+      clans.join.others: true
+      clans.admin.any: true
+      clans.mod.any: true
 
-  factions.kit.halfmod:
+  clans.kit.halfmod:
     description: Zones, bypassing, kicking, and chatspy
     children:
-      factions.kit.fullplayer: true
-      factions.managesafezone: true
-      factions.managewarzone: true
-      factions.bypass: true
-      factions.kick.any: true
-      factions.ownershipbypass: true
-      factions.chatspy: true
-      factions.show.bypassexempt: true
-  factions.kit.fullplayer:
+      clans.kit.fullplayer: true
+      clans.managesafezone: true
+      clans.managewarzone: true
+      clans.bypass: true
+      clans.kick.any: true
+      clans.ownershipbypass: true
+      clans.chatspy: true
+      clans.show.bypassexempt: true
+  clans.kit.fullplayer:
     default: true
-    description: Can also create new factions and use title colors.
+    description: Can also create new clans and use title colors.
     children:
-      factions.kit.halfplayer: true
-      factions.create: true
-      factions.title.color: true
-  factions.kit.halfplayer:
-    description: Can do all but create factions.
+      clans.kit.halfplayer: true
+      clans.create: true
+      clans.title.color: true
+  clans.kit.halfplayer:
+    description: Can do all but create clans.
     children:
-      factions.corner.list: true
-      factions.notifications: true
-      factions.check: true
-      factions.audit: true
-      factions.drain: true
-      factions.wild: true
-      factions.missions: true
-      factions.tntfill: true
-      factions.shop: true
-      factions.permissions: true
-      factions.setdiscord: true
-      factions.discord: true
-      factions.paypal: true
-      factions.setpaypal: true
-      factions.admin: true
-      factions.autoclaim: true
-      factions.promote: true
-      factions.chat: true
-      factions.claim: true
-      factions.claim.line: true
-      factions.claim.radius: true
-      factions.deinvite: true
-      factions.description: true
-      factions.disband: true
-      factions.help: true
-      factions.home: true
-      factions.invite: true
-      factions.join: true
-      factions.kick: true
-      factions.leave: true
-      factions.list: true
-      factions.map: true
-      factions.mod: true
-      factions.money.kit.standard: true
-      factions.noboom: true
-      factions.open: true
-      factions.owner: true
-      factions.ownerlist: true
-      factions.power: true
-      factions.power.any: true
-      factions.relation: true
-      factions.sethome: true
-      factions.show: true
-      factions.stuck: true
-      factions.tag: true
-      factions.toggletitles: true
-      factions.title: true
-      factions.version: true
-      factions.unclaim: true
-      factions.unclaimall: true
-      factions.scoreboard: true
-      factions.showinvites: true
-      factions.seechunk: true
-      factions.monitorlogins: true
-      factions.top: true
-      factions.togglealliancechat: true
-      factions.mapheight: true
-      factions.ban: true
-      factions.fly: true
-      factions.tnt: true
-      factions.checkpoint: true
-      factions.rules: true
-      factions.setwarp: true
-      factions.warp: true
-      factions.banner: true
-      factions.vault: true
-      factions.getvault: true
-  factions.sandbots:
+      clans.corner.list: true
+      clans.notifications: true
+      clans.check: true
+      clans.audit: true
+      clans.drain: true
+      clans.wild: true
+      clans.missions: true
+      clans.tntfill: true
+      clans.shop: true
+      clans.permissions: true
+      clans.setdiscord: true
+      clans.discord: true
+      clans.paypal: true
+      clans.setpaypal: true
+      clans.admin: true
+      clans.autoclaim: true
+      clans.promote: true
+      clans.chat: true
+      clans.claim: true
+      clans.claim.line: true
+      clans.claim.radius: true
+      clans.deinvite: true
+      clans.description: true
+      clans.disband: true
+      clans.help: true
+      clans.home: true
+      clans.invite: true
+      clans.join: true
+      clans.kick: true
+      clans.leave: true
+      clans.list: true
+      clans.map: true
+      clans.mod: true
+      clans.money.kit.standard: true
+      clans.noboom: true
+      clans.open: true
+      clans.owner: true
+      clans.ownerlist: true
+      clans.power: true
+      clans.power.any: true
+      clans.relation: true
+      clans.sethome: true
+      clans.show: true
+      clans.stuck: true
+      clans.tag: true
+      clans.toggletitles: true
+      clans.title: true
+      clans.version: true
+      clans.unclaim: true
+      clans.unclaimall: true
+      clans.scoreboard: true
+      clans.showinvites: true
+      clans.seechunk: true
+      clans.monitorlogins: true
+      clans.top: true
+      clans.togglealliancechat: true
+      clans.mapheight: true
+      clans.ban: true
+      clans.fly: true
+      clans.tnt: true
+      clans.checkpoint: true
+      clans.rules: true
+      clans.setwarp: true
+      clans.warp: true
+      clans.banner: true
+      clans.vault: true
+      clans.getvault: true
+  clans.sandbots:
     description: gives players access to use sandbot commands
-  factions.shield:
+  clans.shield:
     description: gives players access to use shield commands
-  factions.check:
+  clans.check:
     description: give players access to use check commands
-  factions.admin:
+  clans.admin:
     description: hand over your admin rights
-  factions.admin.any:
+  clans.admin.any:
     description: give or revoke admin status for any player in any faction
-  factions.setstrikes:
+  clans.setstrikes:
     description: ability to change/modify strike counts
-  factions.spam:
+  clans.spam:
     description: ability to toggle spam commands on and off
-  factions.viewchest:
-    description: ability to view a factions chest/pv
-  factions.grace:
+  clans.viewchest:
+    description: ability to view a clans chest/pv
+  clans.grace:
     description: gives ability to toggle grace period on and off
-  factions.invsee:
+  clans.invsee:
     description: Allows players to use the inventory see command
-  factions.missions:
+  clans.missions:
     description: Allows players to use missions command
-  factions.alts:
+  clans.alts:
     description: Allows players to use the alts command
-  factions.announce:
+  clans.announce:
     description: announce things to the peasants
-  factions.autoclaim:
+  clans.autoclaim:
     description: auto-claim land as you walk around
-  factions.bypass:
+  clans.bypass:
     description: enable admin bypass mode
-  factions.friendlyfire:
+  clans.friendlyfire:
     description: ability to toggle on friend fire per player
-  factions.lookup:
+  clans.lookup:
     description: Lookup claim & home stats for faction
-  factions.chat:
+  clans.chat:
     description: change chat mode
-  factions.chatspy:
+  clans.chatspy:
     description: enable admin chat spy mode
-  factions.claim:
+  clans.claim:
     description: claim land where you are standing
-  factions.claim.radius:
+  clans.claim.radius:
     description: claim land in a large radius
-  factions.config:
+  clans.config:
     description: change a conf.json setting
-  factions.convert:
+  clans.convert:
     description: change a backend storage
-  factions.create:
+  clans.create:
     description: create a new faction
-  factions.deinvite:
+  clans.deinvite:
     description: remove a pending invitation
-  factions.setdiscord:
+  clans.setdiscord:
     description: set discord link
-  factions.discord:
-    description: view factions discord
-  factions.description:
+  clans.discord:
+    description: view clans discord
+  clans.description:
     description: change the faction description
-  factions.disband:
+  clans.disband:
     description: disband a faction
-  factions.disband.any:
+  clans.disband.any:
     description: disband another faction
-  factions.help:
+  clans.help:
     description: display a help page
-  factions.home:
+  clans.home:
     description: teleport to the faction home
-  factions.homes.bypass:
+  clans.homes.bypass:
     description: bypass all home teleports
-  factions.invite:
+  clans.invite:
     description: invite a player to your faction
-  factions.join:
+  clans.join:
     description: join a faction
-  factions.join.any:
-    description: join any faction, bypassing invitation process for closed factions
-  factions.join.others:
+  clans.join.any:
+    description: join any faction, bypassing invitation process for closed clans
+  clans.join.others:
     description: specify another player in the join command, to move them to the specified faction
-  factions.kick:
+  clans.kick:
     description: kick a player from the faction
-  factions.kick.any:
+  clans.kick.any:
     description: kick anyone from any faction
-  factions.leave:
+  clans.leave:
     description: leave your faction
-  factions.list:
-    description: see a list of the factions
-  factions.lock:
+  clans.list:
+    description: see a list of the clans
+  clans.lock:
     description: lock all write stuff
-  factions.lockspawners:
+  clans.lockspawners:
     description: toggle placement of spawners
-  factions.managesafezone:
+  clans.managesafezone:
     description: claim land as a safe zone and build/destroy within safe zones
-  factions.managewarzone:
+  clans.managewarzone:
     description: claim land as a war zone and build/destroy within war zones
-  factions.map:
+  clans.map:
     description: show the territory map, and set optional auto update
-  factions.mod:
+  clans.mod:
     description: give or revoke moderator rights
-  factions.mod.any:
+  clans.mod.any:
     description: give or revoke moderator rights for any player in any faction
-  factions.money.balance:
-    description: show your factions current money balance
-  factions.money.balance.any:
-    description: show money balance for factions other than your own
-  factions.money.deposit:
+  clans.money.balance:
+    description: show your clans current money balance
+  clans.money.balance.any:
+    description: show money balance for clans other than your own
+  clans.money.deposit:
     description: deposit money into a faction bank
-  factions.money.withdraw:
+  clans.money.withdraw:
     description: withdraw money from your faction bank
-  factions.money.withdraw.any:
-    description: withdraw money from your factions other than your own
-  factions.money.f2f:
+  clans.money.withdraw.any:
+    description: withdraw money from your clans other than your own
+  clans.money.f2f:
     description: transfer money from faction to faction
-  factions.money.f2p:
+  clans.money.f2p:
     description: transfer money from faction to player
-  factions.money.p2f:
+  clans.money.p2f:
     description: transfer money from player to faction
-  factions.money.kit.standard:
+  clans.money.kit.standard:
     children:
-      factions.money.balance: true
-      factions.money.balance.any: true
-      factions.money.deposit: true
-      factions.money.withdraw: true
-      factions.money.f2f: true
-      factions.money.f2p: true
-      factions.money.p2f: true
-  factions.money.*:
+      clans.money.balance: true
+      clans.money.balance.any: true
+      clans.money.deposit: true
+      clans.money.withdraw: true
+      clans.money.f2f: true
+      clans.money.f2p: true
+      clans.money.p2f: true
+  clans.money.*:
     children:
-      factions.money.kit.standard: true
-      factions.money.balance.any: true
-      factions.money.deposit: true
-      factions.money.withdraw: true
-      factions.money.withdraw.any: true
-      factions.money.f2f: true
-      factions.money.f2p: true
-      factions.money.p2f: true
-  factions.noboom:
-    description: toggle explosions (peaceful factions only)
-  factions.open:
+      clans.money.kit.standard: true
+      clans.money.balance.any: true
+      clans.money.deposit: true
+      clans.money.withdraw: true
+      clans.money.withdraw.any: true
+      clans.money.f2f: true
+      clans.money.f2p: true
+      clans.money.p2f: true
+  clans.noboom:
+    description: toggle explosions (peaceful clans only)
+  clans.open:
     description: switch if invitation is required to join
-  factions.owner:
+  clans.owner:
     description: set ownership of claimed land
-  factions.ownerlist:
+  clans.ownerlist:
     description: list owner(s) of this claimed land
-  factions.ownershipbypass:
+  clans.ownershipbypass:
     description: bypass ownership restrictions within own faction's territory
-  factions.setpeaceful:
+  clans.setpeaceful:
     description: designate a faction as peaceful
-  factions.setpermanent:
+  clans.setpermanent:
     description: designate a faction as permanent
-  factions.setpermanentpower:
+  clans.setpermanentpower:
     description: set permanent power for a faction
-  factions.stuck:
+  clans.stuck:
     description: teleports player outside a faction
-  factions.setpaypal:
+  clans.setpaypal:
     description: set paypal to faction
-  factions.power:
+  clans.power:
     description: show player power info
-  factions.power.any:
+  clans.power.any:
     description: view an other players power level
-  factions.powerboost:
+  clans.powerboost:
     description: apply permanent power bonus/penalty to specified player or faction
-  factions.relation:
+  clans.relation:
     description: set relation wish to another faction
-  factions.reload:
+  clans.reload:
     description: reload data file(s) from disk
-  factions.save:
+  clans.save:
     description: save all data to disk
-  factions.sethome:
+  clans.sethome:
     description: set the faction home
-  factions.sethome.any:
+  clans.sethome.any:
     description: set faction home for another faction
-  factions.show:
+  clans.show:
     description: show faction information
-  factions.show.bypassexempt:
+  clans.show.bypassexempt:
     description: show exempt faction information
-  factions.tag:
+  clans.tag:
     description: change the faction tag
-  factions.title:
+  clans.title:
     description: set or remove a players title
-  factions.title.color:
+  clans.title.color:
     description: set yours or other player's titles to be colored.
-  factions.version:
+  clans.version:
     description: see the version of the plugin
-  factions.unclaim:
+  clans.unclaim:
     description: unclaim the land where you are standing
-  factions.unclaimall:
-    description: unclaim all of your factions land
-  factions.scoreboard:
+  clans.unclaimall:
+    description: unclaim all of your clans land
+  clans.scoreboard:
     description: ability to toggle scoreboards
-  factions.showinvites:
+  clans.showinvites:
     description: show pending invites to your faction
-  factions.seechunk:
+  clans.seechunk:
     description: see the chunk you stand in
-  factions.setwarp:
+  clans.setwarp:
     description: set a warp for your faction
-  factions.warp:
+  clans.warp:
     description: access your faction warps
-  factions.modifypower:
+  clans.modifypower:
     description: modify other player's power
-  factions.monitorlogins:
+  clans.monitorlogins:
     description: monitor join and leaves of faction members
-  factions.claim.line:
+  clans.claim.line:
     description: claim in a line
-  factions.top:
-    description: sort factions
-  factions.togglealliancechat:
+  clans.top:
+    description: sort clans
+  clans.togglealliancechat:
     description: toggle alliance chat on and off
-  factions.dontlosepoweroffline:
+  clans.dontlosepoweroffline:
     description: Don't lose power for being offline.
-  factions.ahome:
+  clans.ahome:
     description: Ability to send players to their faction home.
-  factions.autoleavebypass:
+  clans.autoleavebypass:
     description: Bypass autoleave.
-  factions.vault:
+  clans.vault:
     description: Access faction vault.
-  factions.setmaxvault:
+  clans.setmaxvault:
     description: Set a faction's max vaults.
-  factions.mapheight:
+  clans.mapheight:
     description: Set your /f map height.
-  factions.ban:
-    description: Ban players from Factions
-  factions.fly:
+  clans.ban:
+    description: Ban players from clans
+  clans.fly:
     description: Allow use of /f fly
-  factions.rules:
+  clans.rules:
     description: add/remove/set rules for your own faction.
-  factions.checkpoint:
+  clans.checkpoint:
     description: set or go to faction checkpoint
-  factions.tnt:
+  clans.tnt:
     description: add/take from faction bank
-  factions.near:
+  clans.near:
     description: get nearby faction members
-  factions.upgrades:
+  clans.upgrades:
     description: open upgrade menu
-  factions.getvault:
+  clans.getvault:
     description: get faction vault item
-  factions.coleader:
+  clans.coleader:
     description: promote member to co leader
-  factions.tpbanner:
+  clans.tpbanner:
     description: teleport to banner
-  factions.banner:
+  clans.banner:
     description: create banner
-  factions.killholos:
+  clans.killholos:
     description: kill invisible holograms
-  factions.stealth:
+  clans.stealth:
     description: Enter faction stealth mode
-  factions.focus:
+  clans.focus:
     description: Focus a certain player in another faction
-  factions.coords:
+  clans.coords:
     description: broadcast your coords to the player
-  factions.chest:
+  clans.chest:
     description: Open virtual shared faction chest
-  factions.claimat:
+  clans.claimat:
     description: click to claim permission node for /f map
-  factions.paypal.viewall:
-    description: View other factions' paypal ID
-  factions.paypal:
+  clans.paypal.viewall:
+    description: View other clans' paypal ID
+  clans.paypal:
     description: Set/view your own faction's paypal.
-  factions.showclaims:
+  clans.showclaims:
     description: View all you faction claims.

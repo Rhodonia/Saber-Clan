@@ -24,7 +24,7 @@ public class CmdDrain extends FCommand {
         this.aliases.addAll(Aliases.drain);
 
         this.optionalArgs.put("amount", "money");
-        this.optionalArgs.put("role", "faction role");
+        this.optionalArgs.put("role", "Clan role");
 
         this.requirements = new CommandRequirements.Builder(Permission.DRAIN)
                 .playerOnly()

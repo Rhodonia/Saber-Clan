@@ -17,7 +17,7 @@ public class CoreX {
     }
 
     public static String pluginName() {
-        return "SaberFactions";
+        return "SaberClan";
     }
 
     public static void init() {

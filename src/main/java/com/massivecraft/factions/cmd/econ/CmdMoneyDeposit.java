@@ -26,7 +26,7 @@ public class CmdMoneyDeposit extends FCommand {
         this.aliases.addAll(Aliases.money_deposit);
 
         this.requiredArgs.add("amount");
-        this.optionalArgs.put("faction", "yours");
+        this.optionalArgs.put("clans", "yours"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.MONEY_DEPOSIT)
                 .memberOnly()

@@ -14,7 +14,7 @@ public class CmdSethome extends FCommand {
 
     public CmdSethome() {
         this.aliases.addAll(Aliases.setHome);
-        this.optionalArgs.put("faction tag", "mine");
+        this.optionalArgs.put("clan tag", "mine");
 
         this.requirements = new CommandRequirements.Builder(Permission.SETHOME)
                 .playerOnly()

@@ -14,7 +14,7 @@ public class CmdSeeDiscord extends FCommand {
     public CmdSeeDiscord() {
         this.aliases.addAll(Aliases.discord_see);
 
-        this.optionalArgs.put("faction", "yours");
+        this.optionalArgs.put("clans", "yours"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.DISCORD)
                 .memberOnly()
@@ -24,7 +24,7 @@ public class CmdSeeDiscord extends FCommand {
     @Override
     public void perform(CommandContext context) {
         if (!FactionsPlugin.getInstance().getConfig().getBoolean("fdiscord.Enabled")) {
-            context.msg(TL.GENERIC_DISABLED, "Faction Discords");
+            context.msg(TL.GENERIC_DISABLED, "Clan Discords");
             return;
         }
 

@@ -28,7 +28,7 @@ public class CmdMoneyWithdraw extends FCommand {
         this.aliases.addAll(Aliases.money_withdraw);
 
         this.requiredArgs.add("amount");
-        this.optionalArgs.put("faction", "yours");
+        this.optionalArgs.put("clans", "yours"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.MONEY_F2P)
                 .playerOnly()

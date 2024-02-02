@@ -22,7 +22,7 @@ public class CmdTag extends FCommand {
     public CmdTag() {
         this.aliases.addAll(Aliases.tag);
 
-        this.requiredArgs.add("faction tag");
+        this.requiredArgs.add("clan tag");
 
         this.requirements = new CommandRequirements.Builder(Permission.TAG)
                 .withRole(Role.COLEADER)

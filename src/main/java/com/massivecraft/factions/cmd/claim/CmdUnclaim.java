@@ -22,7 +22,7 @@ public class CmdUnclaim extends FCommand {
         this.aliases.addAll(Aliases.unclaim_unclaim);
 
         this.optionalArgs.put("radius", "1");
-        this.optionalArgs.put("faction", "yours");
+        this.optionalArgs.put("clans", "yours"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.UNCLAIM)
                 .playerOnly()

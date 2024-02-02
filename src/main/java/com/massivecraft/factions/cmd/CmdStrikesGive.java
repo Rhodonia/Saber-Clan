@@ -13,7 +13,7 @@ public class CmdStrikesGive extends FCommand {
     public CmdStrikesGive() {
         super();
         this.aliases.addAll(Aliases.strikes_give);
-        this.requiredArgs.add(0, "faction");
+        this.requiredArgs.add(0, "clans"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.SETSTRIKES)
                 .playerOnly()

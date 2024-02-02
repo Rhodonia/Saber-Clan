@@ -128,7 +128,7 @@ public class BannerListener implements Listener {
                     Material type = placedOn.getType();
                     if (type == Material.AIR || type.name().contains("BANNER") && (placedOn.getRelative(BlockFace.UP).getType() == Material.AIR || placedOn.getY() == 255)) {
                         e.getPlayer().sendMessage(CC.DarkPurpleB + "(!) " + CC.DarkPurple + "You have placed a Faction Banner!");
-                        e.getPlayer().sendMessage(CC.Gray + "Faction Members have " + FactionBanner.secondCooldown + "s to teleport to it using " + CC.LightPurple + "/f assist");
+                        e.getPlayer().sendMessage(CC.Gray + "Clan Members have " + FactionBanner.secondCooldown + "s to teleport to it using " + CC.LightPurple + "/f assist");
                         banner = FactionsPlugin.getInstance().getBannerManager().getFactionBannerMap().computeIfAbsent(fac.getId(), e1 -> new FactionBanner());
                         banner.removeBanner();
                         banner.placeBanner(fac, e.getPlayer(), placedOn.getLocation());

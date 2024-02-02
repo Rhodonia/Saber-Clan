@@ -14,7 +14,7 @@ public class CmdPaypalSee extends FCommand {
     public CmdPaypalSee() {
         this.aliases.addAll(Aliases.paypal_see);
 
-        this.optionalArgs.put("faction", "yours");
+        this.optionalArgs.put("clans", "yours"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.PAYPAL)
                 .memberOnly()
@@ -24,7 +24,7 @@ public class CmdPaypalSee extends FCommand {
     @Override
     public void perform(CommandContext context) {
         if (!FactionsPlugin.getInstance().getConfig().getBoolean("fpaypal.Enabled")) {
-            context.msg(TL.GENERIC_DISABLED, "Faction Paypals");
+            context.msg(TL.GENERIC_DISABLED, "Clan Paypals");
             return;
         }
 

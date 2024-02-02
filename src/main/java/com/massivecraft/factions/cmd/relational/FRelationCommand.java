@@ -27,7 +27,7 @@ public abstract class FRelationCommand extends FCommand {
 
     public FRelationCommand() {
         super();
-        this.requiredArgs.add("faction tag");
+        this.requiredArgs.add("clan tag");
 
         this.requirements = new CommandRequirements.Builder(Permission.RELATION)
                 .withRole(Role.MODERATOR)

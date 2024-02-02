@@ -432,7 +432,7 @@ public class Conf {
     }
 
     static {
-        baseCommandAliases.add("f");
+        baseCommandAliases.add("c"); // MODIFIED
 
         blacklistedFactionNames.add("somenamehere");
 

@@ -32,7 +32,7 @@ public class CmdClaimFill extends FCommand {
 
         // Args
         this.optionalArgs.put("limit", String.valueOf(Conf.maxFillClaimCount));
-        this.optionalArgs.put("faction", "you");
+        this.optionalArgs.put("clans", "you"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.CLAIM_FILL)
                 .playerOnly()

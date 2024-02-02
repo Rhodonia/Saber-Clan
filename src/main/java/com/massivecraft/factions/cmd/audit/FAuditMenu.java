@@ -29,7 +29,7 @@ public class FAuditMenu extends GUIMenu {
     private boolean showTimestamps = true;
 
     public FAuditMenu(Player player, Faction faction) {
-        super("Faction Logs", 18);
+        super("Clan Logs", 18);
         this.player = player;
         this.faction = faction;
     }
@@ -102,7 +102,7 @@ public class FAuditMenu extends GUIMenu {
         private boolean timeStamp = false;
 
         public FAuditLogMenu(Player player, Faction faction, FLogType type) {
-            super("Faction Logs", 9);
+            super("Clan Logs", 9);
             this.player = player;
             this.faction = faction;
             this.logType = type;

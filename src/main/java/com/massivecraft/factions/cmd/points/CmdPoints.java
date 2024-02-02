@@ -37,7 +37,7 @@ public class CmdPoints extends FCommand {
     @Override
     public void perform(CommandContext context) {
         if (!FactionsPlugin.getInstance().getConfig().getBoolean("f-points.Enabled", true)) {
-            context.msg(TL.GENERIC_DISABLED, "Faction Points");
+            context.msg(TL.GENERIC_DISABLED, "Clan Points");
             return;
         }
 

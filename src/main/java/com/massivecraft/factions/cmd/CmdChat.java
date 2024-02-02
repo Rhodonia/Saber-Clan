@@ -65,7 +65,7 @@ public class CmdChat extends FCommand {
             return parent.then(LiteralArgumentBuilder.literal("public"))
                     .then(LiteralArgumentBuilder.literal("mod"))
                     .then(LiteralArgumentBuilder.literal("alliance"))
-                    .then(LiteralArgumentBuilder.literal("faction"))
+                    .then(LiteralArgumentBuilder.literal("clans")) // MODIFIED
                     .then(LiteralArgumentBuilder.literal("truce"));
         }
     }

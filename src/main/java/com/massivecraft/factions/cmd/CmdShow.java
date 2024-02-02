@@ -43,7 +43,7 @@ public class CmdShow extends FCommand {
         defaults.add("&8&m----------------------------------------");
 
         // this.requiredArgs.add("");
-        this.optionalArgs.put("faction tag", "yours");
+        this.optionalArgs.put("clan tag", "yours");
 
         this.requirements = new CommandRequirements.Builder(Permission.SHOW)
                 .build();

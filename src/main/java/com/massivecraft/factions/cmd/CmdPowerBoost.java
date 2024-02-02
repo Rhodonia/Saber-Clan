@@ -17,7 +17,7 @@ public class CmdPowerBoost extends FCommand {
     public CmdPowerBoost() {
         super();
         this.aliases.addAll(Aliases.power_boost);
-        this.requiredArgs.add("plugin|f|player|faction");
+        this.requiredArgs.add("plugin|c|player|clan");
         this.requiredArgs.add("name");
         this.requiredArgs.add("# or reset");
 
@@ -29,7 +29,7 @@ public class CmdPowerBoost extends FCommand {
     public void perform(CommandContext context) {
         String type = context.argAsString(0).toLowerCase();
         boolean doPlayer = true;
-        if (type.equals("f") || type.equals("faction")) {
+        if (type.equals("c") || type.equals("clans")) { // MODIFIED
             doPlayer = false;
         } else if (!type.equals("plugin") && !type.equals("player")) {
             context.msg(TL.COMMAND_POWERBOOST_HELP_1);

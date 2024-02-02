@@ -13,7 +13,7 @@ public class CmdJoin extends FCommand {
     public CmdJoin() {
         super();
         this.aliases.addAll(Aliases.join);
-        this.requiredArgs.add("faction name");
+        this.requiredArgs.add("Clan name");
         this.optionalArgs.put("player", "you");
 
         this.requirements = new CommandRequirements.Builder(Permission.JOIN)

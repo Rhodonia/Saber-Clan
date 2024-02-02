@@ -26,7 +26,7 @@ public class CmdCreate extends FCommand {
         super();
         this.aliases.addAll(Aliases.create);
 
-        this.requiredArgs.add("faction tag");
+        this.requiredArgs.add("clan tag");
 
         this.requirements = new CommandRequirements.Builder(Permission.CREATE)
                 .playerOnly()

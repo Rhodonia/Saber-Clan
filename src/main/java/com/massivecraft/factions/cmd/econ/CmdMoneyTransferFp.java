@@ -22,7 +22,7 @@ public class CmdMoneyTransferFp extends FCommand {
         this.aliases.addAll(Aliases.money_transfer_Fp);
 
         this.requiredArgs.add("amount");
-        this.requiredArgs.add("faction");
+        this.requiredArgs.add("clans"); // MODIFIED
         this.requiredArgs.add("player");
 
         this.requirements = new CommandRequirements.Builder(Permission.MONEY_F2P).build();

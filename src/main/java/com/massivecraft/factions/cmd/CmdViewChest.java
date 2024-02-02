@@ -15,7 +15,7 @@ public class CmdViewChest extends FCommand {
         super();
         this.aliases.addAll(Aliases.viewChest);
 
-        this.requiredArgs.add("faction name");
+        this.requiredArgs.add("clan name");
 
         this.requirements = new CommandRequirements.Builder(Permission.VIEWCHEST)
                 .playerOnly()
@@ -25,7 +25,7 @@ public class CmdViewChest extends FCommand {
     @Override
     public void perform(CommandContext context) {
         if (!FactionsPlugin.getInstance().getConfig().getBoolean("fchest.Enabled")) {
-            context.msg(TL.GENERIC_DISABLED, "Faction Chests");
+            context.msg(TL.GENERIC_DISABLED, "clan Chests"); //modified
             return;
         }
 

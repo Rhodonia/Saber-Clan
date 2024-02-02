@@ -22,7 +22,7 @@ import java.util.UUID;
 public class CmdAllyFWarp extends FCommand {
 
     public CmdAllyFWarp() {
-        this.requiredArgs.add("faction name");
+        this.requiredArgs.add("clan name");
         this.optionalArgs.put("warpname", "warpname");
         this.optionalArgs.put("password", "password");
 

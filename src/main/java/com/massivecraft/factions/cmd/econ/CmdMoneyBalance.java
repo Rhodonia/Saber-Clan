@@ -20,7 +20,7 @@ public class CmdMoneyBalance extends FCommand {
         this.aliases.addAll(Aliases.money_balance);
 
         //this.requiredArgs.add("");
-        this.optionalArgs.put("faction", "yours");
+        this.optionalArgs.put("clans", "yours"); // MODIFIED
 
         this.setHelpShort(TL.COMMAND_MONEYBALANCE_SHORT.toString());
 

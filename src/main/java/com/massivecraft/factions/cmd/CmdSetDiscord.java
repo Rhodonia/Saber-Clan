@@ -16,7 +16,7 @@ public class CmdSetDiscord extends FCommand {
         super();
         this.aliases.addAll(Aliases.discord_set);
 
-        this.optionalArgs.put("faction", "yours");
+        this.optionalArgs.put("clans", "yours"); // MODIFIED
 
         this.requiredArgs.add("link");
         this.requirements = new CommandRequirements.Builder(Permission.SETDISCORD)

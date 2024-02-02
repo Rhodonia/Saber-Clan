@@ -20,7 +20,7 @@ public class CmdAltsList extends FCommand {
     public CmdAltsList() {
         super();
         this.aliases.addAll(Aliases.alts_list);
-        this.optionalArgs.put("faction", "yours");
+        this.optionalArgs.put("clans", "yours"); // MODIFIED
 
 
         this.requirements = new CommandRequirements.Builder(Permission.LIST)

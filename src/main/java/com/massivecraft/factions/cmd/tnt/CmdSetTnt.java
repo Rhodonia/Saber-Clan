@@ -13,7 +13,7 @@ public class CmdSetTnt extends FCommand {
 
     public CmdSetTnt() {
         this.aliases.addAll(Aliases.setTnt);
-        this.requiredArgs.add("faction");
+        this.requiredArgs.add("clans"); // MODIFIED
         this.requiredArgs.add("amount");
 
         this.requirements = new CommandRequirements.Builder(Permission.SET_TNT).build();
@@ -30,7 +30,7 @@ public class CmdSetTnt extends FCommand {
         }
 
         if (targetFac == null) {
-            context.sender.sendMessage(ChatColor.RED + "Faction does not exist!");
+            context.sender.sendMessage(ChatColor.RED + "Clan does not exist!");
             return;
         }
 

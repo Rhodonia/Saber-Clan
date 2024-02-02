@@ -38,7 +38,7 @@ public class CmdStuck extends FCommand {
         final int radius = FactionsPlugin.getInstance().getConfig().getInt("hcf.stuck.radius", 10);
 
         if (!FactionsPlugin.getInstance().getConfig().getBoolean("hcf.stuck.Enabled", false)) {
-            context.msg(TL.GENERIC_DISABLED, "Factions Stuck");
+            context.msg(TL.GENERIC_DISABLED, "Clan Stuck"); //modified
             return;
         }
 

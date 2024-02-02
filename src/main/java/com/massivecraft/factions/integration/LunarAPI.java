@@ -24,7 +24,7 @@ public class LunarAPI {
         Faction faction = fPlayer.getFaction();
         if(fPlayer.hasFaction() && fPlayer.getFaction().getHome() != null) {
             //FactionsPlugin.getInstance().getLunarClientAPI().registerPlayer(player);
-            LCWaypoint waypoint = new LCWaypoint("Faction Home", faction.getHome(), Color.LIME.asRGB(), true);
+            LCWaypoint waypoint = new LCWaypoint("Clan Home", faction.getHome(), Color.LIME.asRGB(), true);
             FactionsPlugin.getInstance().getLunarClientWrapper().getLcAPI().sendWaypoint(player, waypoint);
         }
     }

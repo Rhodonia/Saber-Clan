@@ -19,7 +19,7 @@ public class CmdPointsBalance extends FCommand {
         super();
         this.aliases.addAll(Aliases.points_balance);
 
-        this.optionalArgs.put("faction", "yours");
+        this.optionalArgs.put("clans", "yours"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.POINTS)
                 .build();

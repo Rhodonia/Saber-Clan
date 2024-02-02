@@ -14,7 +14,7 @@ public class CmdPermanentPower extends FCommand {
     public CmdPermanentPower() {
         super();
         this.aliases.addAll(Aliases.permanent_power);
-        this.requiredArgs.add("faction");
+        this.requiredArgs.add("clans"); // MODIFIED
         this.requiredArgs.add("power");
 
         this.requirements = new CommandRequirements.Builder(Permission.SET_PERMANENTPOWER)

@@ -19,7 +19,7 @@ public class CmdLookup extends FCommand {
     public CmdLookup() {
         super();
         this.aliases.addAll(Aliases.lookup);
-        this.requiredArgs.add("faction name");
+        this.requiredArgs.add("clan name");
 
         this.requirements = new CommandRequirements.Builder(Permission.LOOKUP)
                 .playerOnly()

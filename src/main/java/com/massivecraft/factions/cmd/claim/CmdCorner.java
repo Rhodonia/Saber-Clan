@@ -35,7 +35,7 @@ public class CmdCorner extends FCommand {
     @Override
     public void perform(CommandContext context) {
         if (FactionsPlugin.getInstance().version == 7) {
-            context.msg(TL.GENERIC_DISABLED, "Faction Corners");
+            context.msg(TL.GENERIC_DISABLED, "Clan Corners");
             return;
         }
         FLocation to = FLocation.wrap(context.player.getLocation());

@@ -21,14 +21,14 @@ public class BrigadierManager {
 
     public BrigadierManager() {
         commodore = CommodoreProvider.getCommodore(FactionsPlugin.getInstance());
-        brigadier = LiteralArgumentBuilder.literal("factions");
+        brigadier = LiteralArgumentBuilder.literal("clans"); // MODIFIED
     }
 
     public void build() {
         commodore.register(brigadier.build());
 
         // Register 'f' alias with all children of 'factions'
-        LiteralArgumentBuilder<Object> fLiteral = LiteralArgumentBuilder.literal("f");
+        LiteralArgumentBuilder<Object> fLiteral = LiteralArgumentBuilder.literal("c"); // MODIFIED
         for (CommandNode<Object> node : brigadier.getArguments()) {
 
             fLiteral.then(node);

@@ -27,7 +27,7 @@ public class CmdAutoClaim extends FCommand {
         this.aliases.addAll(Aliases.claim_auto);
 
         //this.requiredArgs.add("");
-        this.optionalArgs.put("faction", "your");
+        this.optionalArgs.put("clans", "your"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.AUTOCLAIM)
                 .playerOnly()

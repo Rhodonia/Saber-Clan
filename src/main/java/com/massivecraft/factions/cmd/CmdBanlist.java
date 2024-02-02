@@ -22,7 +22,7 @@ public class CmdBanlist extends FCommand {
         super();
         this.aliases.addAll(Aliases.ban_banlist);
 
-        this.optionalArgs.put("faction", "faction");
+        this.optionalArgs.put("clans", "clans"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.BAN)
                 .playerOnly()

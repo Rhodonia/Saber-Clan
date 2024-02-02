@@ -15,7 +15,7 @@ public class CmdPaypalSet extends FCommand {
     public CmdPaypalSet() {
         this.aliases.addAll(Aliases.paypal_set);
 
-        this.optionalArgs.put("faction", "yours");
+        this.optionalArgs.put("clans", "yours"); // MODIFIED
 
         this.requiredArgs.add("email");
 
@@ -29,7 +29,7 @@ public class CmdPaypalSet extends FCommand {
     @Override
     public void perform(CommandContext context) {
         if (!FactionsPlugin.getInstance().getConfig().getBoolean("fpaypal.Enabled")) {
-            context.fPlayer.msg(TL.GENERIC_DISABLED, "Faction Paypals");
+            context.fPlayer.msg(TL.GENERIC_DISABLED, "Clan Paypals");
             return;
         }
         if (context.fPlayer.getRole() != Role.LEADER && !context.fPlayer.isAdminBypassing()) {

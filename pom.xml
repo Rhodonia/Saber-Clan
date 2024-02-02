@@ -7,7 +7,7 @@
     <version>1.6.9.5-4.1.4-STABLE</version>
     <packaging>jar</packaging>
 
-    <name>SaberFactions</name>
+    <name>SaberClan</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

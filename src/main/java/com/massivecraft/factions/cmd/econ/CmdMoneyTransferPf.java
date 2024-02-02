@@ -23,7 +23,7 @@ public class CmdMoneyTransferPf extends FCommand {
 
         this.requiredArgs.add("amount");
         this.requiredArgs.add("player");
-        this.requiredArgs.add("faction");
+        this.requiredArgs.add("clans"); // MODIFIED
 
         this.requirements = new CommandRequirements.Builder(Permission.MONEY_P2F).build();
     }

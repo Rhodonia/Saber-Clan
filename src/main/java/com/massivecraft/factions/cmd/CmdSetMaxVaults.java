@@ -13,7 +13,7 @@ public class CmdSetMaxVaults extends FCommand {
 
     public CmdSetMaxVaults() {
         this.aliases.addAll(Aliases.setMaxVaults);
-        this.requiredArgs.add("faction");
+        this.requiredArgs.add("clans"); // MODIFIED
         this.requiredArgs.add("number");
 
         this.requirements = new CommandRequirements.Builder(Permission.SETMAXVAULTS)

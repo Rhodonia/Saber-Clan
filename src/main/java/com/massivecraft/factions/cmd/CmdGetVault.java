@@ -27,7 +27,7 @@ public class CmdGetVault extends FCommand {
     @Override
     public void perform(CommandContext context) {
         if (!FactionsPlugin.getInstance().getConfig().getBoolean("fvault.Enabled")) {
-            context.fPlayer.msg(TL.GENERIC_DISABLED, "Faction Vaults");
+            context.fPlayer.msg(TL.GENERIC_DISABLED, "Clan Vaults");
             return;
         }
 
